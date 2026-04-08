@@ -166,7 +166,7 @@ function showCurrent(){
     let lat = pos.coords.latitude;
     let lon = pos.coords.longitude;
 
-    map.setView([lat,lon],15);
+    map.setView([lat,lon],18);
 
     L.marker([lat,lon]).addTo(map)
       .bindPopup("現在地").openPopup();
@@ -177,7 +177,7 @@ function showCurrent(){
 // 宮古島
 // =====================
 function showMiyako(){
-  map.setView([24.8,125.28],13);
+  map.setView([24.8,125.28],18);
 
   Object.values(stops).forEach(s=>{
     L.circleMarker([s.stop_lat,s.stop_lon],{radius:4})
