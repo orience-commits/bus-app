@@ -86,7 +86,7 @@
 // =====================
 // 地図
 // =====================
-var map = L.map('map').setView([24.8,125.28], 28);
+var map = L.map('map').setView([24.8,125.36], 28);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
@@ -166,7 +166,7 @@ function showCurrent(){
     let lat = pos.coords.latitude;
     let lon = pos.coords.longitude;
 
-    map.setView([lat,lon],18);
+    map.setView([lat,lon],36);
 
     L.marker([lat,lon]).addTo(map)
       .bindPopup("現在地").openPopup();
@@ -177,7 +177,7 @@ function showCurrent(){
 // 宮古島
 // =====================
 function showMiyako(){
-  map.setView([24.8,125.28],18);
+  map.setView([24.8,125.28],36);
 
   Object.values(stops).forEach(s=>{
     L.circleMarker([s.stop_lat,s.stop_lon],{radius:4})
