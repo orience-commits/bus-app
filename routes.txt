@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_color,route_text_color
+536,9360003005217,7,平良線（上り：上里商店回り）,,3,,
+537,9360003005217,7,平良線（下り：結の橋学園回り）,,3,,
+538,9360003005217,7,平良線（下り：上里商店回り）,,3,,
+555,9360003005217,7,平良線（上り：結の橋学園回り）,,3,,

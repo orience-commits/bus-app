@@ -1,0 +1,26 @@
+const CACHE_NAME = "bus-app-v1";
+
+self.addEventListener("install", e => {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll([
+        "./",
+        "index.html",
+        "stops.txt",
+        "stop_times.txt",
+        "trips.txt",
+        "routes.txt",
+        "shapes.txt",
+        "icon.png"
+      ]);
+    })
+  );
+});
+
+self.addEventListener("fetch", e => {
+  e.respondWith(
+    caches.match(e.request).then(res => {
+      return res || fetch(e.request);
+    })
+  );
+});
